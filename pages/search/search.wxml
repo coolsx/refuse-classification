@@ -1,0 +1,26 @@
+<view class='searchInp'>
+    <image src='/images/icon-search.png'></image>
+    <input placeholder="{{placeholderText}}" data-type="1" bindinput='getMsgFn' focus='true' value="{{keyName}}"></input>
+    <image bindtap="clearKeyname" wx:if="{{keyName.length > 0}}" src="/images/clear.png"></image>
+</view>
+
+<view class="alwaysList" wx:if="{{keyName.length == 0}}">
+    <view class="cyKeyWord" wx:for='{{alwaysList}}' wx:key='id' data-name="{{item}}" data-type="2" bindtap="getMsgFn">{{item}}</view>
+</view>
+
+<view class="ADS" wx:if="{{keyName.length==0}}"><ad unit-id="adunit-761c0d7711342c21"></ad></view>
+
+<view class="showResultList" wx:if="{{keyName.length > 0 && showResultList.length > 0}}">
+    <view class="showItem" wx:for='{{showResultList}}' wx:key='id'>
+        <text>{{index+1}}</text>
+        <text>{{item.name}}</text>
+        <text wx:if="{{item.type=='可回收'}}" class="act1">可回收垃圾</text>
+        <text wx:if="{{item.type=='有害垃圾'}}" class="act2">有害垃圾</text>
+        <text wx:if="{{item.type=='湿垃圾'}}" class="act3">厨余/湿垃圾</text>
+        <text wx:if="{{item.type=='干垃圾'}}" class="act4">其他/干垃圾</text>
+    </view>
+</view>
+
+<view class="noeResult" wx:if="{{keyName.length > 0 && showResultList.length == 0}}">
+    <view>暂无收录，请尝试更换关键字</view>
+</view>

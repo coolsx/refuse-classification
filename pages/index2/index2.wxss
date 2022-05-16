@@ -1,0 +1,143 @@
+page{
+    background: #f6f6f6
+}
+.mainBox {
+    padding: 0 50rpx;
+    border-radius: 20rpx 20rpx 0 0;
+}
+
+.mainBox {
+    padding:40rpx 20rpx;
+    overflow: hidden
+}
+
+.typeTab {
+    float: right;
+    width: 160rpx;
+}
+
+.typeTab view {
+    margin-top: 14rpx;
+    height: 70rpx;
+    font-size: 22rpx;
+    text-align: center;
+    line-height: 70rpx;
+    color: #333;
+    background: #fff;
+}
+
+.typeTab button {
+    width: 150rpx;
+    margin-top: 40rpx;
+    margin-left: 0;
+    height: 56rpx;
+    border: 2rpx solid #1aad16;
+    border-radius: 80rpx;
+    overflow: hidden;
+    padding: 0;
+    background: #fff;
+    /* box-shadow: 8rpx 8rpx 15rpx #aaa; */
+}
+
+.typeTab button image {
+    float: left;
+    margin-left: 18rpx;
+    margin-top: 10rpx;
+    width: 30rpx;
+    height: 30rpx;
+}
+
+.typeTab button text {
+    float: left;
+    margin-left: 16rpx;
+    font-size: 24rpx;
+    line-height: 55rpx;
+    color: #333;
+}
+
+.typeTab button::after {
+    border: none;
+}
+
+.typeTab view:nth-child(1).act02 {
+    background: #024884;
+    color: #fff;
+    font-weight: bold;
+}
+
+.typeTab view:nth-child(2).act02 {
+    background: #e53422;
+    color: #fff;
+    font-weight: bold;
+}
+
+.typeTab view:nth-child(3).act02 {
+    background: #653f32;
+    color: #fff;
+    font-weight: bold;
+}
+
+.typeTab view:nth-child(4).act02 {
+    background: #2e2a29;
+    color: #fff;
+    font-weight: bold;
+}
+.showModel {
+    float: left;
+    margin-top: 10rpx;
+    width: 530rpx;
+    background: #fff;
+    border-radius: 20rpx;
+    overflow: hidden;
+}
+
+.showModel image {
+    display: block;
+    margin: 20rpx auto 0;
+    width: 150rpx;
+    height: 150rpx;
+}
+
+.defin {
+    padding: 0 22rpx;
+    margin-top: 20rpx;
+    font-size: 28rpx;
+    line-height: 2;
+    color: #222;
+    text-indent: 2em;
+}
+
+.defin text, .require text {
+    font-weight: bold;
+    color: #1aad16
+}
+
+.require {
+    padding: 0 22rpx;
+    margin-top: 20rpx;
+    font-size: 28rpx;
+    line-height: 2;
+    color: #222;
+    text-indent: 2em;
+}
+
+.types {
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+    padding: 0 20rpx;
+}
+
+.types view {
+    font-size: 28rpx;
+    line-height: 2;
+    text-indent: 1.5em;
+}
+
+.types view:nth-child(odd) {
+    background: #f6f6f6;
+}
+
+.types view:nth-child(1) {
+    font-weight: bold;
+    color: #1aad16
+}

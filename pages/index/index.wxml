@@ -1,0 +1,31 @@
+<view class="textInpBox" bindtap="navToSearchPage">
+    <image src="/images/search.png"></image>
+    <text>请输入关键字查询垃圾分类</text>
+</view>
+
+<view class="tip">点击并长按下表即可保存到本地</view>
+
+<view class='imgBox' bindtap="showPic">
+    <image mode='widthFix' src='/images/down.jpg'></image>
+</view>
+
+<view hidden="{{ifShowAudio}}" class="showAudioIng">
+    <image src="/images/showAudio.png"></image>
+    <text>{{sec}}s</text>
+</view>
+
+<view class="ADS">
+    <ad unit-id="adunit-761c0d7711342c21"></ad>
+</view>
+
+<view style="height:180rpx"></view>
+
+<view class="searchInpBg {{ifShowFooter?'searchInpBgHidden':''}}">
+    <view class="searchInpBox">
+        <image src="/images/bg.png" class="footBg"></image>
+        <view class="inputBox audioInp" bindtouchstart="startFn" bindtouchend="endFn">
+            <image src="/images/showAudio.png"></image>
+            <text>语音识别</text>
+        </view>
+    </view>
+</view>

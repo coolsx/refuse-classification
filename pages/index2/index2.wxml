@@ -1,0 +1,26 @@
+<view class='mainBox'>
+    <view class='showModel'>
+        <image src='{{showTypeList[showTypeIndex].img}}'></image>
+        <view class='defin'>
+            <text>{{showTypeList[showTypeIndex].defin[0]}}：</text>{{showTypeList[showTypeIndex].defin[1]}}
+        </view>
+        <view class='require'>
+            <text>投放要求：</text>
+            <view wx:for='{{showTypeList[showTypeIndex].require}}' wx:key='id'>{{index+1}}、{{item}}</view>
+        </view>
+        <view class='types'>
+            <view>主要类别：</view>
+            <view wx:for='{{showTypeList[showTypeIndex].types}}' wx:key='id'>{{item}}</view>
+        </view>
+    </view>
+    <view class='typeTab'>
+        <view class="{{showTypeIndex==0?'act02':''}}" data-index='0' bindtap='clickTypeFn'>可回收垃圾</view>
+        <view class="{{showTypeIndex==1?'act02':''}}" data-index='1' bindtap='clickTypeFn'>有害垃圾</view>
+        <view class="{{showTypeIndex==2?'act02':''}}" data-index='2' bindtap='clickTypeFn'>厨余/湿垃圾</view>
+        <view class="{{showTypeIndex==3?'act02':''}}" data-index='3' bindtap='clickTypeFn'>其他/干垃圾</view>
+        <button open-type='share'>
+            <image src="/images/fx.png"></image>
+            <text>分享</text>
+        </button>
+    </view>
+</view>
